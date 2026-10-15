@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>نشاط (٣): المادّة النقيّة وغير النقيّة</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0}
+:root{color-scheme:light;--bg:#f4f9fd;--card:#fff;--tx:#2d4156;--ac:#ff9a4d;--ac2:#4fb6cc;--ok:#2e9e5b;--bad:#d64545;--bd:#dfeaf3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+
+
+body{font-family:'Segoe UI',Tahoma,Arial,sans-serif;background:var(--bg);color:var(--tx)}
+.wel{min-height:100dvh;display:grid;place-items:center;padding:20px;background:linear-gradient(135deg,#d8f0ff,#ffe8f1 55%,#fff3c9);position:relative;overflow:hidden}
+.bub{position:absolute;border-radius:50%;background:rgba(120,180,230,.2);animation:fl 8s infinite ease-in-out}
+@keyframes fl{50%{transform:translateY(-45px)}}
+.wc{position:relative;background:rgba(255,255,255,.96);color:#17324d;border-radius:26px;padding:34px 26px;max-width:600px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.wc .ic{font-size:60px;animation:fl 3s infinite}
+.wc h1{margin:.2em 0;font-size:1.4rem;color:#1f8a9e}.wc h2{font-size:1.9rem;margin:.1em 0 .6em;color:#f28c28}.wc p{margin:.4em 0;font-size:1.05rem}
+.btn{background:linear-gradient(#ffa24a,#f28c28);color:#fff;border:0;border-radius:14px;padding:12px 28px;font-weight:700;font-size:1.15rem;font-family:inherit;cursor:pointer;box-shadow:0 6px 0 #c06d17;margin-top:14px}
+.btn:active{transform:translateY(3px);box-shadow:0 3px 0 #c06d17}
+.top{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#fff;color:var(--tx);box-shadow:0 2px 12px rgba(80,120,160,.15);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.top b{white-space:nowrap}.pb{flex:1;height:10px;background:#e3eef7;border-radius:9px;overflow:hidden}.pb i{display:block;height:100%;width:0;background:#7ccf9b;transition:width .4s}
+.grid{display:grid;grid-template-columns:1fr;gap:16px;padding:16px;max-width:900px;margin:auto}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:0;border-radius:24px;padding:18px;box-shadow:0 6px 24px rgba(90,130,170,.14)}.card h3{margin:0 0 8px}
+.stage{position:relative;width:min(100%,420px);margin:10px auto;touch-action:none;cursor:none;border-radius:16px;overflow:hidden;background:#dfe9f0}
+#cv{display:block;width:100%;height:auto}
+.lw{position:absolute;width:170px;height:170px;border:6px solid #c9922e;border-radius:50%;pointer-events:none;box-shadow:0 8px 20px rgba(0,0,0,.4);left:125px;top:75px}
+.lw canvas{width:100%;height:100%;border-radius:50%;display:block}
+.lw:after{content:"";position:absolute;width:16px;height:80px;background:linear-gradient(90deg,#8a1c1c,#d33);border-radius:8px;left:132px;top:150px;transform:rotate(-45deg);transform-origin:top}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}.chip{border:1.5px solid var(--bd);background:var(--card);color:var(--tx);border-radius:20px;padding:6px 12px;font:inherit;cursor:pointer}.chip.on{background:#ffe2bd;border-color:var(--ac);color:#5a3300}
+.ob{margin-top:8px;padding:10px;border-radius:12px;background:rgba(242,140,40,.14);min-height:50px}
+.mx{margin-top:10px;padding:10px;border:2px dashed var(--bd);border-radius:14px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+input,select,textarea{font:inherit;padding:8px 10px;border:1.5px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx);flex:1;min-width:110px}
+textarea{width:100%;min-height:54px;margin-bottom:6px}
+.btn2{background:var(--ac2);color:#fff;border:0;border-radius:10px;padding:8px 14px;font:inherit;cursor:pointer}
+.q{padding:12px 0;border-bottom:1px dashed var(--bd)}.q p{margin:0 0 8px;font-weight:600}
+.fb{display:block;margin-top:6px;font-size:.93rem}.fb.g{color:var(--ok)}.fb.b{color:var(--bad)}
+.fin{margin:16px;padding:20px;border-radius:18px;background:linear-gradient(135deg,#ffd166,#f28c28);color:#3a2100;text-align:center;font-size:1.1rem}
+h4{margin:10px 0 0;color:var(--ac2)}
+</style></head><body>
+<div class="wel" id="wel"><div class="wc"><div class="ic">🔍</div><h1>أهلاً بكم في تجربة</h1><h2>نشاط (٣): المادّة النقيّة والمادّة غير النقيّة</h2>
+<p>إعداد الطالبة: <b>ريتال خالد وليد اشبير</b></p><p>إشراف المعلمة الفاضلة: <b>روز اغبارية</b></p>
+<button class="btn" onclick="start()">ابدأ التجربة ◀</button></div></div>
+
+<div id="app" hidden>
+<div class="top"><b>🔍 نشاط (٣): النقيّة وغير النقيّة</b><div class="pb"><i id="bar"></i></div><b id="pc">0/7</b></div>
+<div class="grid">
+<section class="card"><h3>🔬 مختبر العدسة المكبّرة</h3>
+<p style="margin:0 0 6px;font-size:.9rem">اختاري عينة ثم حرّكي العدسة (بالفأرة أو بإصبعك) فوقها لتفحّصي دقائقها.</p>
+<div class="chips" id="smp"></div>
+<div class="stage" id="st"><canvas id="cv" width="420" height="320"></canvas><div class="lw" id="lw"><canvas id="ln" width="170" height="170"></canvas></div></div>
+<div class="ob" id="ob">حرّكي العدسة فوق العينة 🔎</div>
+<div class="mx"><b>🥄 محطة الخلط</b>
+<div class="row" style="margin-top:6px">أضيف ملعقة من <select id="selA"></select> إلى <select id="selB"></select></div>
+<div class="row" style="margin-top:8px"><button class="btn2" onclick="addSp()">🥄 أضيفي الملعقة</button><button class="btn2" onclick="stir()">🌀 حرّكي الخليط</button></div>
+<span class="fb" id="mf"></span></div></section>
+
+<section class="card"><h3>📝 ورقة النشاط</h3>
+<h4>أتفحّص العيّنات بالعدسة</h4>
+<div class="q" data-q="1" data-yes="صحيح! دقائقها متشابهة." data-no="افحصي برادة الألومنيوم بالعدسة وانظري إلى شكل دقائقها ولونها."><p>١. هل تتكوّن برادة الألومنيوم من النوع نفسه من الدقائق؟</p><div class="chips" data-items="نعم|لا" data-ok="نعم"></div><button class="btn2" onclick="chk(this)">تحقّق</button><span class="fb"></span></div>
+<div class="q" data-q="2" data-yes="صحيح! حبيبات السكر كلها متشابهة." data-no="افحصي السكر بالعدسة مجدداً."><p>٢. هل تتكوّن حبيبات السكر من النوع نفسه من الدقائق؟</p><div class="chips" data-items="نعم|لا" data-ok="نعم"></div><button class="btn2" onclick="chk(this)">تحقّق</button><span class="fb"></span></div>
+<div class="q" data-q="3" data-yes="ممتاز! المادة النقية تتكوّن من نوع واحد من الدقائق." data-no="فكّري: ما الذي لاحظتيه عن دقائق كل عينة؟"><p>٣. أسمّي كلاً من برادة الألومنيوم وحبيبات السكر بالمادّة النقيّة. لماذا؟</p><div class="chips" data-items="لأنها تتكوّن من نوع واحد من الدقائق|لأنها تتكوّن من أكثر من نوع من الدقائق|لأنها ثقيلة|لأن لونها أبيض" data-ok="لأنها تتكوّن من نوع واحد من الدقائق"></div><button class="btn2" onclick="chk(this)">تحقّق</button><span class="fb"></span></div>
+<h4>أخلط وأفحص الخليط</h4>
+<div class="q" data-q="4" data-need="1" data-yes="صحيح! نرى نوعين مختلفين من الدقائق." data-no="افحصي الخليط بالعدسة: هل كل الدقائق متشابهة؟"><p>١. هل يتكوّن الخليط الناتج من النوع نفسه من الدقائق؟ (حضّري الخليط أولاً)</p><div class="chips" data-items="نعم|لا" data-ok="لا"></div><button class="btn2" onclick="chk(this)">تحقّق</button><span class="fb"></span></div>
+<div class="q" data-q="5" data-need="1" data-yes="أحسنتِ! الخليط مادة غير نقية." data-no="تلميح: كم نوعاً من الدقائق في الخليط؟"><p>٢. أسمّي خليط برادة الألومنيوم والسكر بالمادّة غير النقيّة. لماذا؟</p><div class="chips" data-items="لأنه يتكوّن من نوعين مختلفين من الدقائق|لأنه يتكوّن من نوع واحد من الدقائق|لأنه صغير الحجم" data-ok="لأنه يتكوّن من نوعين مختلفين من الدقائق"></div><button class="btn2" onclick="chk(this)">تحقّق</button><span class="fb"></span></div>
+<div class="q" data-q="6"><p>٣. أكتب بلغتي تعريفاً لكل من:</p><b>المادّة النقيّة:</b><textarea data-kw="نوع/صنف,دقائق/جزيئات/ذرات/مكون" placeholder="مثال: ..."></textarea><b>المادّة غير النقيّة:</b><textarea data-kw="نوعين/اكثر من نوع/مادتين/خليط,دقائق/مواد/مكون" placeholder="مثال: ..."></textarea><button class="btn2" onclick="chkT(this)">تحقّق</button><span class="fb"></span></div>
+<div class="q" data-q="7" data-yes="رائع! الهواء والعصير والحليب والتربة وماء البحر خلائط." data-no="تذكّري: النقية من نوع واحد فقط من الدقائق، أما العصير والهواء والتربة والحليب وماء البحر ففيها أنواع كثيرة."><p>٤. أختار الأمثلة على المواد <b>النقيّة</b> من بيئتي:</p><div class="chips" data-items="ماء مقطّر|ملح الطعام|هواء|عصير|ذهب خالص|سكر|ماء البحر|حليب|تربة|نحاس" data-ok="ماء مقطّر|ملح الطعام|ذهب خالص|سكر|نحاس"></div><button class="btn2" onclick="chk(this)">تحقّق</button><span class="fb"></span></div>
+</section></div>
+<div class="fin" id="fin" hidden>🎉 أنهيتم النشاط بنجاح!<br><b>المادة النقية: نوع واحد من الدقائق. وغير النقية (الخليط): أكثر من نوع.</b></div></div>
+
+<script>
+const done=new Set();
+for(let i=0;i<14;i++){const b=document.createElement('div');b.className='bub';const s=20+Math.random()*80;b.style.cssText=`width:${s}px;height:${s}px;left:${Math.random()*100}%;top:${Math.random()*100}%;animation-delay:${-Math.random()*8}s`;wel.prepend(b)}
+function start(){wel.hidden=true;app.hidden=false;scrollTo(0,0);mv0()}
+const N={al:'برادة الألومنيوم',su:'السكر',salt:'ملح الطعام',sand:'الرمل'},W=420,H=320,CX=210,CY=160,R=148,Z=6;
+let G=[],mixed=0,wx=210,wy=160;
+const rnd=(a,b)=>a+Math.random()*(b-a);
+function pt(r,cx=CX,cy=CY){const a=rnd(0,6.283),d=Math.sqrt(Math.random())*r;return[cx+Math.cos(a)*d,cy+Math.sin(a)*d]}
+function mk(t){const[x,y]=pt(R-6);return{t,x,y,tx:x,ty:y,a:rnd(0,3.14),s:t=='al'?rnd(2.8,3.4):t=='su'?rnd(3.2,3.8):t=='salt'?rnd(2.8,3.4):rnd(1.8,5),c:t=='sand'?'hsl('+rnd(25,42)+','+rnd(30,55)+'%,'+rnd(40,68)+'%)':0}}
+function set(ts){G=[];for(let i=0;i<2600;i++)G.push(mk(ts[i%ts.length]));dm();dl(wx,wy)}
+function gr(c,g,x,y,k){const s=g.s*k;c.save();c.translate(x,y);c.rotate(g.a);
+if(g.t=='al'){c.fillStyle='#b4bcc4';c.beginPath();c.arc(0,0,s*.55,0,6.3);c.fill();if(k>2){c.strokeStyle='#6b747c';c.stroke();c.fillStyle='#fff';c.beginPath();c.arc(-s*.18,-s*.18,s*.14,0,6.3);c.fill()}}
+else if(g.t=='sand'){c.fillStyle=g.c;c.beginPath();c.moveTo(-s/2,-s/3);c.lineTo(0,-s/2);c.lineTo(s/2,-s/5);c.lineTo(s/3,s/2);c.lineTo(-s/3,s/3);c.fill()}
+else{c.fillStyle=g.t=='su'?'#f4fbff':'#e8e8e8';c.fillRect(-s/2,-s/2,s,s);if(k>2){c.strokeStyle=g.t=='su'?'#8fc0e4':'#aaa';c.strokeRect(-s/2,-s/2,s,s);c.fillStyle='rgba(255,255,255,.95)';c.fillRect(-s/2,-s/2,s*.35,s*.35)}}
+c.restore()}
+function dm(){const c=cv.getContext('2d');c.clearRect(0,0,W,H);c.fillStyle='#dfe9f0';c.fillRect(0,0,W,H);c.fillStyle='#8c98a3';c.beginPath();c.arc(CX,CY,R+8,0,6.3);c.fill();c.fillStyle='#26323d';c.beginPath();c.arc(CX,CY,R,0,6.3);c.fill();G.forEach(g=>gr(c,g,g.x,g.y,1.3))}
+function dl(x,y){const c=ln.getContext('2d');c.clearRect(0,0,170,170);c.save();c.beginPath();c.arc(85,85,85,0,6.3);c.clip();c.fillStyle='#26323d';c.fillRect(0,0,170,170);const T=new Set();
+G.forEach(g=>{const dx=g.x-x,dy=g.y-y;if(Math.abs(dx)<18&&Math.abs(dy)<18){gr(c,g,85+dx*Z,85+dy*Z,1.3*Z);if(dx*dx+dy*dy<190)T.add(g.t)}});c.restore();obs(T)}
+function obs(T){const a=[...T];ob.textContent=!a.length?'حرّكي العدسة فوق العينة 🔎':a.length==1?'🔎 أرى دقائق من نوع واحد فقط: '+N[a[0]]+' — شكلها ولونها متشابهان.':'🔎 أرى أنواعاً مختلفة من الدقائق: '+a.map(t=>N[t]).join(' و ')+' ممزوجة معاً.'}
+function mv(e){const r=cv.getBoundingClientRect(),px=e.clientX-r.left,py=e.clientY-r.top;lw.style.left=px-88+'px';lw.style.top=py-88+'px';const f=W/r.width;wx=px*f;wy=py*f;dl(wx,wy)}
+function mv0(){const r=cv.getBoundingClientRect();lw.style.left=r.width/2-88+'px';lw.style.top=r.height/2-88+'px'}
+st.addEventListener('pointermove',mv);st.addEventListener('pointerdown',mv);
+Object.keys(N).forEach(k=>{const b=document.createElement('button');b.className='chip';b.textContent=N[k]+(k=='salt'||k=='sand'?' (إضافة)':'');b.onclick=()=>{[...smp.children].forEach(x=>x.classList.remove('on'));b.classList.add('on');set([k])};smp.appendChild(b);[selA,selB].forEach(s=>s.add(new Option(N[k],k)))});
+selB.value='su';smp.children[0].classList.add('on');set(['al']);
+function addSp(){const A=selA.value,B=selB.value;if(A==B){mf.textContent='اختاري مادتين مختلفتين ☝️';mf.className='fb b';return}
+G=[];for(let i=0;i<2100;i++)G.push(mk(B));for(let i=0;i<500;i++){const g=mk(A);g.tx=g.x;g.ty=g.y;[g.x,g.y]=pt(26,CX,CY-70);G.push(g)}
+[...smp.children].forEach(x=>x.classList.remove('on'));mf.textContent='أضفتِ ملعقة من '+N[A]+' إلى '+N[B]+'. الآن حرّكي الخليط 🌀';mf.className='fb g';dm();dl(wx,wy)}
+let busy=0;function stir(){if(busy)return;if(!G.some(g=>Math.abs(g.tx-g.x)>1)){mf.textContent='أضيفي ملعقة أولاً 🥄';mf.className='fb b';return}
+busy=1;let f=0;(function s(){G.forEach(g=>{g.x+=(g.tx-g.x)*.07;g.y+=(g.ty-g.y)*.07;g.a+=.05});dm();dl(wx,wy);if(++f<70)requestAnimationFrame(s);else{busy=0;mixed=1;mf.textContent='تم الخلط ✔ افحصي الخليط بالعدسة: كم نوعاً ترين؟';mf.className='fb g'}})()}
+function prog(){bar.style.width=done.size/7*100+'%';pc.textContent=done.size+'/7';if(done.size==7)fin.hidden=false}
+function fb(q,m,g){const f=q.querySelector('.fb');f.textContent=m;f.className='fb '+(g?'g':'b');if(g){done.add(q.dataset.q);prog()}}
+document.querySelectorAll('.chips[data-items]').forEach(c=>c.dataset.items.split('|').forEach(t=>{const b=document.createElement('button');b.className='chip';b.textContent=t;b.onclick=()=>{if(c.dataset.ok.split('|').length==1&&c.dataset.items.split('|').length<5)c.querySelectorAll('.on').forEach(x=>x!=b&&x.classList.remove('on'));b.classList.toggle('on')};c.appendChild(b)}));
+function chk(btn){const q=btn.closest('.q');if(q.dataset.need&&!mixed)return fb(q,'حضّري الخليط وحرّكيه أولاً 🥄',0);const c=q.querySelector('.chips'),ok=new Set(c.dataset.ok.split('|')),s=[...c.querySelectorAll('.on')].map(b=>b.textContent),g=s.length==ok.size&&s.every(x=>ok.has(x));fb(q,g?q.dataset.yes:q.dataset.no,g)}
+const nz=s=>s.replace(/[\u064B-\u0652]/g,'').replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي');
+function chkT(b){const q=b.closest('.q'),g=[...q.querySelectorAll('textarea')].every(a=>{const t=nz(a.value);return a.dataset.kw.split(',').every(p=>p.split('/').some(w=>t.includes(nz(w))))});fb(q,g?'تعريفان ممتازان 🌟 النقية: نوع واحد من الدقائق، وغير النقية: أكثر من نوع.':'تلميح: اذكري عدد أنواع الدقائق في كل منهما (نوع واحد / أكثر من نوع).',g)}
+</script></body></html>
